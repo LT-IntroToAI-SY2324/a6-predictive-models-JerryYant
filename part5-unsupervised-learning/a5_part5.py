@@ -8,7 +8,7 @@ data = pd.read_csv("part5-unsupervised-learning/customer_data.csv")
 x = data[["Annual Income", "Spending Score"]]
 
 #standardize the data
-x_std = StandardScaler().fit_transform(data)
+x_std = StandardScaler().fit_transform(x)
 
 #the value of k has been defined for you
 k = 5
@@ -28,8 +28,7 @@ for i in range(k):
   plt.scatter(cluster[:, 0], cluster[:, 1])
 
 #plot the centroids
-plt.scatter(centroids[:, 0], centroids[:, 1], marker='X', s=100,
-            c='r', label='centroid')
+plt.scatter(centroids[:, 0], centroids[:, 1], marker= "X", s=100, c= "r", label='centroid')
             
 #shows the graph
 plt.xlabel("Annual Income")
