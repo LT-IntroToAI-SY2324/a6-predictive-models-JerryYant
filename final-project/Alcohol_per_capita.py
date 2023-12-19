@@ -6,6 +6,7 @@ from sklearn.cluster import KMeans
 #import data
 data = pd.read_csv("final-project/alcohol_per_capita.csv")
 x = data[["TIME", "LITRES/CAPITA"]]
+#inversing?
 new_data = pd.DataFrame("final-project/alcohol_per_capita.csv")
 new_x = new_data[["TIME", "LTRES/CAPITA"]]
 
