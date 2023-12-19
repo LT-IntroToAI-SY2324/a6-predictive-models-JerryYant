@@ -21,3 +21,5 @@ On the other hand, when you analyzed the mall customer data, you did not know th
 
 <b>Linear vs. Logistic Regression</b>
 If you decided on a supervised learning algorithm, the next step is to identify if you should use linear or logistic regression. Linear regression models are used for predicting numerical values, such as the price of a car or the time needed to travel between two places. Logistic regression models are used for classification, or when you want to label each output as part of a specific group.
+
+Unsupervised logistic regression graph
