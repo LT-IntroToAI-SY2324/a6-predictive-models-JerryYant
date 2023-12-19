@@ -1,18 +1,11 @@
-
-import numpy as np
+import matplotlib.pyplot as plt
 import pandas as pd
-from sklearn import linear_model
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import KMeans
 
-from kaggle.api.kaggle_api_extended import KaggleApi
-api = KaggleApi()
-api.authenticate()
+data = pd.read_csv("final-project/alcohol_per_capita.csv")
+x = data('TIME', 'LITRES/CAPITA')
 
-data=pd.read_csv("oecd-plots.ipynb")
+x_std = StandardScaler().fit_transform(x)
 
-x = data["Time"]
-y = data["Litres/Capita"]
 
-print(x)
-print(y)
