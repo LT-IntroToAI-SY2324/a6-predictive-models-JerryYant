@@ -6,11 +6,12 @@ from sklearn.cluster import KMeans
 #import data
 data = pd.read_csv("final-project/alcohol_per_capita.csv")
 x = data[["TIME", "LITRES/CAPITA"]]
+print(x)
 
 x_std = StandardScaler().fit_transform(x)
 
 #K means
-k = 100 #Unsure about what value to set k at
+k = 4 #Unsure about what value to set k at
 km = KMeans(n_clusters=k).fit(x_std)
 
 #Centroid and lable
