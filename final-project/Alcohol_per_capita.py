@@ -7,13 +7,13 @@ from sklearn.cluster import KMeans
 data = pd.read_csv("final-project/alcohol_per_capita.csv")
 x = data[["TIME", "LITRES/CAPITA"]]
 #inversing?
-new_data = pd.DataFrame("final-project/alcohol_per_capita.csv")
-new_x = new_data[["TIME", "LTRES/CAPITA"]]
+##new_data = pd.DataFrame("final-project/alcohol_per_capita.csv")
+##new_x = new_data[["TIME", "LTRES/CAPITA"]]
 
 x_std = StandardScaler().fit_transform(x)
 
 #K means
-k = 4 #Unsure about what value to set k at
+k = 5 #Unsure about what value to set k at
 km = KMeans(n_clusters=k).fit(x_std)
 
 #Centroid and lable
